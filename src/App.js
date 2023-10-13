@@ -3,6 +3,7 @@ import DigitButton from './DigitsButton';
 import OperationalButton from './OperationalButton';
 import './style.css';
 
+
 export const ACTIONS ={
 
   ADD_DIGIT: 'add-digit',
@@ -11,6 +12,7 @@ export const ACTIONS ={
   DELETE_DIGIT:'delete_digit',
   EVALUATE:'evaluate'
 }
+
 
 function reducer(state,{type , payload }){
 switch(type){
@@ -111,10 +113,12 @@ function evaluate({currentOperand,previousOperand,operation}){
     case "-":
       computation = prev - current
 
-      case "*":
-      computation = prev * current
-      case "/":
-      computation = prev / current 
+      // case "/":
+      // computation = prev/current
+      
+      
+      // case "*":
+      //  computation = prev * current 
   }
   return computation.toString()
 }
@@ -143,8 +147,9 @@ function App() {
 </div>
 <button className='span-two' onClick={()=> dispatch({type:ACTIONS.CLEAR})}>AC</button>
 <button onClick={()=> dispatch({type:ACTIONS.DELETE_DIGIT})}>DEL</button>
-<OperationalButton operation="/" dispatch={dispatch} />
 
+
+<OperationalButton operation="/" dispatch={dispatch} />
 <DigitButton digit="1" dispatch={dispatch} />
 <DigitButton digit="2" dispatch={dispatch} />
 <DigitButton digit="3" dispatch={dispatch} />

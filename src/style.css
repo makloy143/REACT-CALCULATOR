@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+h1{
+    font-size: 70px;
+    color: #ffffff;
+}
+
 body{
     margin: 0;
     background: linear-gradient(to right, #00aaff,#00ff6c);
@@ -12,6 +17,7 @@ body{
     margin-top: 2rem;
     grid-template-columns: repeat(4, 6rem);
     grid-template-rows: minmax(7rem,auto) repeat(5,6rem);
+    justify-content: center;
 }
 
 .calculator-grid>button{
@@ -41,16 +47,18 @@ body{
     padding: .75rem;
     word-wrap: break-word;
     word-break: break-all;
+    color: #ffffff;
+    font-size: 2.5rem;
 
 }
 
-.output .previous-operhand{
+.output .previous-operand{
     color: rgba(255,255,255,.75);
     font-size: 1.5rem;
 
 }
 
-.output .current-operhand{
+.output .current-operand{
     color: white;
     font-size: 2.5rem;
 }
